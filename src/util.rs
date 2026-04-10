@@ -1,11 +1,10 @@
-use async_trait::async_trait;
+use arbhx_core::{FilterOptions, Metadata};
 use dashmap::DashMap;
 use ignore::overrides::{Override, OverrideBuilder};
 use ignore::Match;
 use std::io;
 use std::io::ErrorKind;
 use std::path::PathBuf;
-use arbhx_core::{FilterOptions, Metadata};
 
 /// Represents a **stateful** sorting for a [`DataQuery`]
 pub struct SimpleIgnore {

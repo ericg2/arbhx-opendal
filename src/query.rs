@@ -14,7 +14,6 @@ use crate::util::SimpleIgnore;
 pub struct OpenDALQuery {
     pub(crate) operator: Operator,
     pub(crate) path: String,
-    pub(crate) opts: FilterOptions,
     pub(crate) sort: SimpleIgnore,
     pub(crate) recursive: bool,
     pub(crate) root: bool,
@@ -33,7 +32,6 @@ impl OpenDALQuery {
             sort: SimpleIgnore::new(&opts)?,
             operator,
             path,
-            opts,
             recursive,
             root,
         })

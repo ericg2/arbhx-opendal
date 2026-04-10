@@ -1,6 +1,5 @@
 use crate::path_to_str;
 use arbhx_core::{DataRead, DataReadSeek};
-use async_trait::async_trait;
 use opendal::{FuturesAsyncReader, Operator};
 use std::fmt::{Debug, Formatter};
 use std::io::SeekFrom;

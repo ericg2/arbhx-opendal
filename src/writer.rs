@@ -1,16 +1,15 @@
-use std::fmt::{Debug, Formatter};
-use opendal::{FuturesAsyncWriter, Operator};
+use crate::path_to_str;
+use arbhx_core::DataWrite;
+use async_trait::async_trait;
 use opendal::options::WriteOptions;
+use opendal::{FuturesAsyncWriter, Operator};
+use std::fmt::{Debug, Formatter};
 use std::io;
-use std::io::Write;
 use std::path::PathBuf;
 use std::pin::Pin;
 use std::task::{Context, Poll};
-use arbhx_core::DataWrite;
-use async_trait::async_trait;
 use tokio::io::{AsyncWrite, AsyncWriteExt};
 use tokio_util::compat::{Compat, FuturesAsyncWriteCompatExt};
-use crate::path_to_str;
 
 pub struct OpenDALWriter {
     pub(crate) path: PathBuf,
